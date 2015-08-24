@@ -138,9 +138,9 @@ update street_segments set name = 'Unnamed street' where name is null;
 -- load turn restrictions
 create table turn_restrictions (
        osm_restriction_id bigint not null references relations,
-       segment_from integer not null references street_segments,
-       segment_to integer not null references street_segments,
-       node integer not null references nodes,
+       segment_from bigint not null references street_segments,
+       segment_to bigint not null references street_segments,
+       node bigint not null references nodes,
        type text,
        exceptions text);
 
@@ -168,9 +168,9 @@ select tags.relation_id, seg1.id, seg2.id, via.member_id, tags.v, tags2.v from
 
 create table turns_prohibited (
        osm_restriction_id bigint not null references relations,
-       segment_from integer not null references street_segments,
-       segment_to integer not null references street_segments,
-       node integer not null references nodes,
+       segment_from bigint not null references street_segments,
+       segment_to bigint not null references street_segments,
+       node bigint not null references nodes,
        exceptions text);
 
 
