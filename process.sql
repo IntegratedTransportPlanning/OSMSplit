@@ -5,6 +5,11 @@
 
 -- Segment OSM ways by intersection to create a routable network
 
+DROP TABLE IF EXISTS street_segments;
+DROP TABLE IF EXISTS streets_conflated;
+DROP TABLE IF EXISTS turn_restrictions;
+DROP TABLE IF EXISTS turns_prohibited;
+
 create table street_segments (
        id serial primary key,
        way_id bigint references ways,

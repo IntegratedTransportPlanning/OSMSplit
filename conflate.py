@@ -18,7 +18,7 @@ if speedups.available:
 # DB connection with env_var override / default values
 dbname=os.environ.get(  'PGDBNAME', 'osm')
 dbuser=os.environ.get(  'PGUSER',   'osm')
-dbpass=os.environ.get(  'PGUSER',   'osm')
+dbpass=os.environ.get(  'PGPASS',   'osm')
 dbschema=os.environ.get('PGSCHEMA', 'public')
 conn = psycopg2.connect(database=dbname, user=dbuser, password=dbpass)
 
