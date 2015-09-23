@@ -1,0 +1,9 @@
+DELETE FROM turn_restrictions;
+DELETE FROM turns_prohibited;
+DELETE FROM street_segments;
+DELETE FROM way_nodes;
+DELETE FROM ways;
+DELETE FROM relations;
+DELETE FROM relation_members;
+DELETE FROM users;
+DELETE FROM nodes;
